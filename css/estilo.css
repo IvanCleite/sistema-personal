@@ -1,0 +1,64 @@
+footer {
+  border: 1px solid red;
+  min-height: 70px;
+  max-height: 70px;
+}
+
+.container-principal {
+  border: 1px solid green;
+  margin-top: 80px;
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+
+h6 {
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(25, 14, 187) !important;
+}
+
+.navbar {
+  background-color: rgb(232, 176, 240);
+  border-radius: 5px;
+}
+
+.footer {
+  background-color: rgb(232, 176, 240);
+  border-radius: 5px;
+}
+
+.nav-link {
+  color: rgb(57, 117, 248);
+}
+
+#dropMenu {
+  float: right;
+  justify-content: end;
+}
+
+#dropMenuId {
+  max-width: 30px;
+  background: rgb(126, 233, 227);
+}
+
+.dropdown-item {
+  color: rgb(0, 81, 255);
+}
+
+.linkDisabled {
+  color: rgb(13, 105, 41) !important;
+}
+
+.linkDisabled:hover {
+  color: rgb(13, 105, 41) !important;
+}
+
+.pagePrevious:hover {
+  color: rgb(25, 14, 187) !important;
+}
