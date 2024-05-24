@@ -1,13 +1,22 @@
 footer {
-  border: 1px solid red;
   min-height: 70px;
   max-height: 70px;
+  background-color: rgb(232, 176, 240);
+  border-radius: 5px;
 }
 
 .container-principal {
-  border: 1px solid green;
+  /*background-color: rgb(233, 232, 232);*/
+  background-color: rgb(247, 245, 245);
+  border-radius: 5px;
   margin-top: 80px;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 153px);
+}
+
+.container-interno-inf {
+  background-color: white;
+  border-radius: 5px;
+  height: calc(100vh - 220px);
   overflow-y: auto;
 }
 
@@ -24,11 +33,6 @@ a:hover {
 }
 
 .navbar {
-  background-color: rgb(232, 176, 240);
-  border-radius: 5px;
-}
-
-.footer {
   background-color: rgb(232, 176, 240);
   border-radius: 5px;
 }
@@ -61,4 +65,8 @@ a:hover {
 
 .pagePrevious:hover {
   color: rgb(25, 14, 187) !important;
+}
+
+.linhaClarear {
+  background-color: rgb(226, 235, 235);
 }

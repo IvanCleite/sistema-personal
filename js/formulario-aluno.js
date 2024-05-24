@@ -1,8 +1,9 @@
-function formularioAluno(alunoAEditar) {
+function formularioAluno(alunoAEditar, acao) {
 
   let form = document.createElement("form");
-  form.action = "controle.php?acao=editar";
+  form.action = acao;
   form.id = 'formAluno'
+  form.className = 'mt-2'
   form.method = "post";
 
   // Input id oculto ----------------------------
@@ -157,18 +158,12 @@ function formularioAluno(alunoAEditar) {
   inputValor.placeholder = "valor";
   inputValor.value = alunoAEditar[11];
 
-  // Div para o Button Submit
-  //let divButton = document.createElement("div");
-  //divButton.style = "text-align: right;";
-
   // Button Submit --------------------------------
   let buttonSubmit = document.createElement("button");
   buttonSubmit.type = "submit";
   buttonSubmit.setAttribute('form', 'formAluno')
   buttonSubmit.className = "btn btn-info form-button mt-3 mb-3";
   buttonSubmit.innerHTML = "Enviar";
-
-  //divButton.appendChild(buttonSubmit);
 
   form.appendChild(inputId);
   form.appendChild(lableNome);
@@ -193,11 +188,14 @@ function formularioAluno(alunoAEditar) {
   form.appendChild(inputDia);
   form.appendChild(lableValor);
   form.appendChild(inputValor);
-  //form.appendChild(divButton);
 
   let containerPrincipal = document.getElementById("container-principal");
+
   divButton = document.getElementById("divButton");
 
   containerPrincipal.insertBefore(form, containerPrincipal[0]);
   divButton.insertBefore(buttonSubmit, divButton[0]);
+
 }
+
+

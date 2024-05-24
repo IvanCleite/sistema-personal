@@ -15,63 +15,58 @@
 
 <body>
 
+    <nav class="container navbar navbar-expand-md navbar-dark fixed-top">
 
+        <div class="container nav-container d-flex">
 
-        <nav class="container navbar navbar-expand-md navbar-dark fixed-top">
+            <a class="navbar-brand ms-3" href="#">
+                <h6 class="display-6">ALUNOS</h6>
+            </a>
 
-            <div class="container nav-container d-flex">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#dropMenu">
+                <i class="bi bi-list text-white"></i>
+            </button>
 
-                <a class="navbar-brand ms-3" href="#">
-                    <h6 class="display-6">ALUNOS</h6>
-                </a>
+            <div class="navbar-collapse collapse" id="dropMenu" onmouseleave="closeNav()">
+                <ul class="navbar-nav ml-auto mt-2">
 
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#dropMenu">
-                    <i class="bi bi-list text-white"></i>
-                </button>
+                    <li class="nav-item">
+                        <a id="home" class="nav-link linkDisabled">Home</a>
+                    </li>
 
-                <div class="navbar-collapse collapse" id="dropMenu" onmouseleave="closeNav()">
-                    <ul class="navbar-nav ml-auto mt-2">
+                    <div class="dropdown" onmouseleave="closeMenu()">
+                        <li id="navItemAlunos" class="nav-item">
 
-                        <li class="nav-item">
-                            <a id="home" class="nav-link linkDisabled">Home</a>
+                            <a id="alunos" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                onmouseenter="openMenu()">
+                                Alunos
+                            </a>
+
+                            <ul id="dropMenuId" class="dropdown-menu" onmouseleave="closeMenu()"
+                                onmouseenter="openMenu()">
+                                <li><a id="cadastra" class="dropdown-item nav-link" href="#"
+                                        onclick="cadastraAluno()">Cadastra</a></li>
+
+                                <li><a id="edita" class="dropdown-item nav-link" href="#"
+                                        onclick="editaAluno()">Edita</a></li>
+
+                                <li><a id="lista" class="dropdown-item nav-link" href="#">Lista</a></li>
+                            </ul>
                         </li>
+                    </div>
 
-                        <div class="dropdown" onmouseleave="closeMenu()">
-                            <li id="navItemAlunos" class="nav-item">
-
-                                <a id="alunos" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-                                    onmouseenter="openMenu()">
-                                    Alunos
-                                </a>
-
-                                <ul id="dropMenuId" class="dropdown-menu" onmouseleave="closeMenu()"
-                                    onmouseenter="openMenu()">
-                                    <li><a id="cadastra" class="dropdown-item nav-link" href="#"
-                                            onclick="cadastraAluno()">Cadastra</a></li>
-
-                                    <li><a id="edita" class="dropdown-item nav-link" href="#"
-                                            onclick="editaAluno()">Edita</a></li>
-
-                                    <li><a id="lista" class="dropdown-item nav-link" href="#">Lista</a></li>
-                                </ul>
-                            </li>
-                        </div>
-
-                        <li class="nav-item">
-                            <a id="videos" class="nav-link" href="#" onclick="listaVideos()">Vídeos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="financeiro" class="nav-link" href="#" onclick="financeiro()">Financeiro</a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="nav-item">
+                        <a id="videos" class="nav-link" href="#" onclick="listaVideos()">Vídeos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="financeiro" class="nav-link" href="#" onclick="financeiro()">Financeiro</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-
+        </div>
+    </nav>
 
     <div id="container-principal" class="container container-principal ">
-
-
 
     </div>
 
@@ -83,8 +78,5 @@
 
     <script src="get_script.php"></script>
 
-
 </body>
-
-
 </html>
